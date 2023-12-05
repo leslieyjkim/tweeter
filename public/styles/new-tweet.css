@@ -1,0 +1,39 @@
+#new-tweet {
+  display: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+form div {
+  display: flex;
+  justify-content: space-between;
+  font-family: Bungee;
+  font-size: 0.9em;
+  padding-top: 0.3em;
+}
+form button {
+  background-color: #4056a1;
+  color: #ffffff;
+  border: none;
+  padding: 0.2em 0.3em;
+}
+form textarea {
+  border: none;
+  background-color: transparent;
+  border-bottom: 0.2em solid #50504b;
+  margin-bottom: 0.5em;
+  outline: none;
+  resize: none;
+  font-size: 0.9em;
+}
+form .red-text {
+  color: red;
+}
+form #error {
+  color: red;
+  font-weight: 400;
+  font-size: 0.8em;
+}

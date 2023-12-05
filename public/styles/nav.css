@@ -15,31 +15,31 @@ nav span.logo {
   font-size: 1.2em;
 }
 
-nav #New-tweet {
+nav #Write-New-tweet {
   font-size: 0.75em;
   text-align: center;
 }
 
-nav #New-tweet-section {
+nav #Write-New-tweet-section {
   display: flex;
   align-items: center;
 }
 
-nav #New-tweet .strong-text {
+nav #Write-New-tweet .strong-text {
   font-family: "Source Sans 3", sans-serif;
   font-weight: bold;
 }
-nav #New-tweet .light-subtext {
+nav #Write-New-tweet .light-subtext {
   font-weight: normal;
   font-family: "Source Sans 3", sans-serif;
   color: #e0e0e0;
   opacity: 0.8;
 }
-nav #New-tweet:hover {
+nav #Write-New-tweet:hover {
   cursor: pointer;
 }
 
-nav #New-tweet i.fas {
+nav #Write-New-tweet i.fas {
   color: #ef4126;
   position: relative;
   animation: move 2s infinite;

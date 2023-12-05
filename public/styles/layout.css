@@ -17,17 +17,28 @@ html {
  */
 
 body {
-  color: whitesmoke;
+  color: #545149;
   background-color: #f4f1ec;
-  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
   font-size: 24px;
   font-family: "Source Sans 3", sans-serif;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto; /* Auto margin for center alignment */
+  padding: 20px; /* Optional padding for better visual appearance */
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  background-color: inherit; /* Same background color as the body */
 }
 
 /* apply Bungee font to the Tweeter logo in the nav */
 nav span {
   font-family: "Bungee", sans-serif;
 }
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
