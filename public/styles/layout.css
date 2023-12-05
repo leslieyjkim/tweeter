@@ -6,7 +6,9 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -15,11 +17,17 @@ html {
  */
 
 body {
-  color: #545149;
-  background-color: #f4f1ec;
+  color: whitesmoke;
+  background-color: orange;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
   font-size: 24px;
+  font-family: "Source Sans 3", sans-serif;
 }
 
+/* apply Bungee font to the Tweeter logo in the nav */
+nav span {
+  font-family: "Bungee", sans-serif;
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

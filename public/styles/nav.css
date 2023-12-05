@@ -1,0 +1,47 @@
+nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  /*Above code is to achieve this nav-bar always on screen effect. */
+  height: 120px;
+  width: 100%;
+  background-color: #4056a1;
+  color: #ffffff;
+  padding: 1.5em;
+  box-sizing: border-box;
+}
+nav span.logo {
+  font-family: "Bungee", sans-serif;
+  font-size: 1.2em;
+}
+
+nav #to-new-tweet {
+  font-size: 0.75em;
+  text-align: center;
+}
+
+nav #new-tweet-section {
+  display: flex;
+  align-items: center;
+}
+
+nav #to-new-tweet .strong-text {
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: bold;
+}
+nav #to-new-tweet .light-subtext {
+  font-weight: normal;
+  font-family: "Source Sans 3", sans-serif;
+  color: #e0e0e0;
+  opacity: 0.8;
+}
+nav #to-new-tweet:hover {
+  cursor: pointer;
+}
+
+nav #to-new-tweet i.fas {
+  color: #ef4126;
+  position: relative;
+  animation: move 2s infinite;
+}
