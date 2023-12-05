@@ -1,11 +1,10 @@
 nav {
-  align-items: center;
+  position: fixed;
   display: flex;
   justify-content: space-between;
-  position: fixed;
-  /*Above code is to achieve this nav-bar always on screen effect. */
+  align-items: center;
   height: 120px;
-  width: 100%;
+  width: 100vw;
   background-color: #4056a1;
   color: #ffffff;
   padding: 1.5em;
@@ -16,31 +15,31 @@ nav span.logo {
   font-size: 1.2em;
 }
 
-nav #to-new-tweet {
+nav #New-tweet {
   font-size: 0.75em;
   text-align: center;
 }
 
-nav #new-tweet-section {
+nav #New-tweet-section {
   display: flex;
   align-items: center;
 }
 
-nav #to-new-tweet .strong-text {
+nav #New-tweet .strong-text {
   font-family: "Source Sans 3", sans-serif;
   font-weight: bold;
 }
-nav #to-new-tweet .light-subtext {
+nav #New-tweet .light-subtext {
   font-weight: normal;
   font-family: "Source Sans 3", sans-serif;
   color: #e0e0e0;
   opacity: 0.8;
 }
-nav #to-new-tweet:hover {
+nav #New-tweet:hover {
   cursor: pointer;
 }
 
-nav #to-new-tweet i.fas {
+nav #New-tweet i.fas {
   color: #ef4126;
   position: relative;
   animation: move 2s infinite;
