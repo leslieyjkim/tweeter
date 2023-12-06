@@ -4,12 +4,10 @@ form {
   justify-content: space-between;
   align-content: center;
 }
-
-label {
+/* label {
   font-family: sans-serif;
   justify-content: center;
-}
-
+} */
 textarea {
   flex: 100%;
   border: none;
@@ -21,6 +19,8 @@ textarea {
 }
 
 button {
+  display: flex;
+  justify-self: space-between;
   background-color: #4056a1;
   color: #ffffff;
   font-family: Bungee;
