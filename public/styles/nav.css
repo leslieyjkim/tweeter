@@ -23,6 +23,7 @@ nav #Write-New-tweet {
 nav #Write-New-tweet-section {
   display: flex;
   align-items: center;
+  flex-direction: column;
 }
 
 nav #Write-New-tweet .strong-text {
