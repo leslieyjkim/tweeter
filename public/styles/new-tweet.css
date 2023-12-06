@@ -25,7 +25,7 @@ button {
   color: #ffffff;
   font-family: Bungee;
 }
-
+/* ---------------------------------------counter of character in tweet-------- */
 .counter {
   justify-content: right;
   font-family: Bungee;
@@ -39,7 +39,7 @@ button {
   letter-spacing: 2px;
   color: #dc0909;
 }
-
+/* ---------------------------------------tweet-container-------- */
 .container {
   padding-bottom: 40px;
 }
@@ -63,18 +63,22 @@ article:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 .article-tweet-header-profile {
   display: flex;
 }
 
-.tweet-header-icon {
-  margin-right: 0.5em;
+.tweet-icon {
+  margin-left: 0.5em;
+  margin-right: 0.2em;
+  font-size: 60px;
 }
 
 .tweet-handle {
   margin-right: 0.5em;
+  opacity: 0.5;
 }
 
 .article-tweet-footer {

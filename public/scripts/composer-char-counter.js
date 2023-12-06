@@ -27,6 +27,20 @@
 //   });
 // });
 
+// $(document).ready(function() {
+//   $('#tweet-text').on('input', function() {
+
+//     var tweetLength = $(this).val().length;
+//     var remainingCharacters = 140 - tweetLength;
+//     $('.counter').text(remainingCharacters);
+//     if (remainingCharacters < 0) {
+//       $('.counter').css('color', 'red');
+//     } else {
+//       $('.counter').css('color', '');
+//     }
+//   });
+// });
+
 $(document).ready(function () {
   $("#tweet-text").on("input", function () {
     //grab the contents of textarea input field
