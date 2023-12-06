@@ -55,7 +55,7 @@ $(document).ready(function () {
   });
 });
 
-// --------------STEP ON HOW TO IMPLENTATION ADD COUNTER-----------------------------------
+// --------------STEP ON HOW TO IMPLENTATION ADD COUNTER------------------
 //call the counter
 //.counter
 //use Jquery .text to set a new value of .counter

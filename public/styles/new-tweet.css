@@ -45,13 +45,13 @@ button {
 }
 
 article {
-  margin-top: 2em;
-  border: solid 5px #545454;
+  margin-top: 4em;
+  border: solid 5px #4f6961;
   padding: 10px;
 }
 
 article:hover {
-  box-shadow: 0px 10px #888888;
+  box-shadow: 10px 10px #cfcdbc;
 }
 
 .article-tweet-header {
@@ -102,15 +102,15 @@ article:hover {
 }
 
 .fa-solid.fa-flag:hover {
-  color: yellow;
+  color: #fae20a;
 }
 
 .fa-sharp.fa-solid.fa-retweet:hover {
-  color: yellow;
+  color: #fae20a;
 }
 
 .fa-solid.fa-heart:hover {
-  color: yellow;
+  color: #fae20a;
 }
 
 .new-tweet #new-tweet-err-message {
