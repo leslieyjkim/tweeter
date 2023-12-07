@@ -3,7 +3,12 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-// Test / driver code (temporary). Eventually will get this from the server.
+//-----------Prevent XSS(Cross-Site Scripting)attack ------
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 
 // Helper function to convert timestamp to "time ago" format
 const timeAgo = function (timestamp) {
@@ -39,7 +44,7 @@ const createTweetElement = (tweetData) => {
         </div>
         <div class="tweet-handle"><b>${tweetData.user.handle}</b></div>
         </header>
-        <p class="tweet-text">${tweetData.content.text}</p>
+        <p class="tweet-text">${escape(tweetData.content.text)}</p>
       <footer class="article-tweet-footer">
         <div class="timestamp"><b>${timeAgo(tweetData.created_at)}</b></div>
         <div class="tweet-footer-icons">
@@ -56,12 +61,12 @@ const createTweetElement = (tweetData) => {
 
 // ----------Prepend(top to bottom) new tweet to id='tweet-container'in index.html----
 const renderTweets = function (tweets) {
+  $("#tweets-container").empty(); //if you don't empty here, the remained list will be doubled.
   for (const tweet of tweets) {
     const $tweet = createTweetElement(tweet);
     $("#tweets-container").prepend($tweet);
   }
 };
-
 // -----------Fetching tweets from /tweets routes.
 //client-side JS uses AJAX to request fetch (GET) data from the server.
 //load tweet from "/tweets", receive array in json.
@@ -78,6 +83,7 @@ $(document).ready(function () {
   loadTweets()
     .then((tweets) => {
       renderTweets(tweets);
+      console.log("tweets", tweets);
     })
     .catch(function (error) {
       console.error("Error in loading tweets:", error);
@@ -91,11 +97,11 @@ $(document).ready(function () {
     const tweetContent = $tweetText.val().trim();
 
     if (tweetContent === "") {
-      alert("Error: Tweet content cannot be empty.");
+      alert("Error: Uh-oh, your tweet box is empty!");
       return;
     }
     if (tweetContent.length > 140) {
-      alert("Error: Tweet content exceeds 140 characters.");
+      alert("Error: Tweet exceeds 140 characters.");
       return;
     }
     //In case of 'No error', sending tweet to server
