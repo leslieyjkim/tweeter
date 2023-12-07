@@ -30,6 +30,7 @@ const timeAgo = function (timestamp) {
     return `${seconds} seconds ago`;
   }
 };
+
 // ---------------------------------------Mark-up Tweet----------
 // updated 'userTweets' into '$tweet'
 const createTweetElement = (tweetData) => {
@@ -88,22 +89,39 @@ $(document).ready(function () {
     .catch(function (error) {
       console.error("Error in loading tweets:", error);
     });
-
+  //------------Hide the error message when page is loaded
+  const formReset = function () {
+    $("#too-long-error").hide();
+    $("#empty-error").hide();
+  };
+  formReset();
   // event listener :  Post tweet details to server
   $("#tweet-form").on("submit", function (event) {
     event.preventDefault();
+    //hide the error from the start of form submition
+    formReset();
+
     //validation
     const $tweetText = $("#tweet-text");
     const tweetContent = $tweetText.val().trim();
 
-    if (tweetContent === "") {
-      alert("Error: Uh-oh, your tweet box is empty!");
+    // if (tweetContent === "") {
+    //   alert("Error: Uh-oh, your tweet box is empty!");
+    //   return;
+    // }
+    // if (tweetContent.length > 140) {
+    //   alert("Error: Tweet exceeds 140 characters.");
+    //   return;
+    // }
+    if (event.target.text.value === "") {
+      $("#empty-error").show();
       return;
     }
-    if (tweetContent.length > 140) {
-      alert("Error: Tweet exceeds 140 characters.");
+    if (event.target.text.value.length > 140) {
+      $("#too-long-error").show();
       return;
     }
+
     //In case of 'No error', sending tweet to server
     const formData = $(this).serialize(); //$(this) refers to the form that triggered the submit event(same as${#tweet-form")})
     console.log(formData);

@@ -25,6 +25,35 @@ button {
   color: #ffffff;
   font-family: Bungee;
 }
+
+/* ----ERROR BUTTON STYLING---- */
+.error-button {
+  align-items: center;
+  background-color: #4056a1;
+  border: 2px solid #f7b292;
+  border-radius: 1px;
+  box-shadow: 5px 7px #e37144;
+  box-sizing: border-box;
+  color: #494a54;
+  cursor: pointer;
+  display: flex;
+  font-family: "Source Sans Pro", sans-serif;
+
+  text-shadow: 1px 1px black;
+  color: white;
+  font-size: 20px;
+  height: 55px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
 /* ---------------------------------------counter of character in tweet-------- */
 .counter {
   justify-content: right;
