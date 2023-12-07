@@ -89,6 +89,7 @@ const renderTweets = function (tweets) {
 
 // -------------------------------Fetching tweets from /tweets routes.
 //client-side JavaScript will use AJAX to request fetch (GET) data from the server.
+//load tweet from "/tweets", receive array in json.
 const loadTweets = function () {
   return $.ajax({
     method: "GET",
@@ -97,10 +98,7 @@ const loadTweets = function () {
   });
 };
 
-// $(document).ready(function () {
-//   renderTweets(tweetData);
-// });
-
+// -----------------------------------//load tweet and render
 $(document).ready(function () {
   loadTweets()
     .then((tweets) => {
@@ -113,16 +111,32 @@ $(document).ready(function () {
   // event listener :  Post tweet details to server
   $("#tweet-form").on("submit", function (event) {
     event.preventDefault();
+    //validation
+    const $tweetText = $("#tweet-text");
+    const tweetContent = $tweetText.val().trim();
+
+    if (!tweetContent) {
+      alert("Error: Tweet content cannot be empty.");
+      return;
+    }
+
+    if (tweetContent.length > 140) {
+      alert("Error: Tweet content exceeds 140 characters.");
+      return;
+    }
+    //In case of 'No error', sending tweet to server
     const formData = $(this).serialize(); //$(this) refers to the form that triggered the submit event(same as${#tweet-form")})
     console.log(formData);
     $.ajax({
-      url: "/tweets/", // The URL to send the data to
-      type: "POST", // The HTTP method to use for the request
-      data: formData, // The data to send. This is the serialized form data
+      url: "/tweets/", // URL to send data to
+      type: "POST", // HTTP method for the request
+      data: formData, // data to send. This is the serialized form data
       success: function (response) {
         console.log("Data submitted successfully!");
-        // You might want to update the UI here to show the new tweet
-        // Assuming 'response' is the HTML for the new tweet
+        // Update the UI here to show the new tweet
+        loadTweets().then((tweets) => {
+          renderTweets(tweets);
+        });
         $("#tweet-list").prepend(response); // This adds the new tweet to the top of the list
         console.log("Data submitted successfully!");
       },

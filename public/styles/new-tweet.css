@@ -91,7 +91,7 @@ article:hover {
 .tweet-text {
   display: flex;
   justify-content: flex-start;
-  height: 50px;
+  height: 70px;
   border-bottom: solid 5px #545454;
 }
 
