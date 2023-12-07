@@ -12,6 +12,13 @@ html {
   box-sizing: inherit;
 }
 
+main {
+  margin: auto;
+  text-align: center;
+  width: 90%;
+  position: relative;
+  background-color: inherit;
+}
 /*
  * Global layout stuff
  */
