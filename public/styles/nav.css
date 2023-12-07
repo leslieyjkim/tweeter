@@ -41,8 +41,21 @@ nav #Write-New-tweet:hover {
   cursor: pointer;
 }
 
+/* //for animation below double errows; */
+@keyframes move {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 nav #Write-New-tweet i.fas {
   color: #ef4126;
   position: relative;
   animation: move 2s infinite;
+  margin-top: 1.5em;
 }
