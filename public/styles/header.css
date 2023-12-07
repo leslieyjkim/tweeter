@@ -1,13 +1,18 @@
 .header {
   width: 100%;
-  height: 520px;
-  padding-top: 120px;
+  height: 500px;
+  z-index: -1000;
+  padding-top: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: rgb(240, 136, 17);
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+}
+
+.header img {
+  height: 200px;
 }
 .first-name {
   font-family: "Source Sans 3", sans-serif;

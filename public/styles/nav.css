@@ -9,6 +9,7 @@ nav {
   color: #ffffff;
   padding: 1.5em;
   box-sizing: border-box;
+  z-index: 1000;
 }
 nav span.logo {
   font-family: "Bungee", sans-serif;

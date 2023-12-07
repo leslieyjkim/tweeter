@@ -79,7 +79,7 @@ const createTweetElement = (tweetData) => {
   return $tweet;
 };
 
-// ------------------------------------Render New Tweets to Main page container-----
+// -------------------------------Append new tweet to id='tweet-container'in index.html----
 const renderTweets = function (tweets) {
   for (const tweet of tweets) {
     const $tweet = createTweetElement(tweet);
