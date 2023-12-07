@@ -98,6 +98,13 @@ const loadTweets = function () {
   });
 };
 
+//---------------------------------Reset function when it's under error
+const formReset = function () {
+  $("#too-long-error").hide();
+  $("#empty-error").hide();
+};
+formReset();
+
 // -----------------------------------//load tweet and render
 $(document).ready(function () {
   loadTweets()
@@ -111,17 +118,19 @@ $(document).ready(function () {
   // event listener :  Post tweet details to server
   $("#tweet-form").on("submit", function (event) {
     event.preventDefault();
+    formReset();
     //validation
     const $tweetText = $("#tweet-text");
     const tweetContent = $tweetText.val().trim();
 
     if (!tweetContent) {
-      alert("Error: Tweet content cannot be empty.");
+      // alert("Error: Tweet content cannot be empty.");
+      $("#empty-error").show();
       return;
     }
-
     if (tweetContent.length > 140) {
-      alert("Error: Tweet content exceeds 140 characters.");
+      // alert("Error: Tweet content exceeds 140 characters.");
+      $("#too-long-error").show();
       return;
     }
     //In case of 'No error', sending tweet to server
