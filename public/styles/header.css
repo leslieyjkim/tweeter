@@ -1,8 +1,8 @@
 .header {
   width: 100%;
-  height: 500px;
+  height: 400px;
   z-index: -1000;
-  padding-top: 150px;
+  padding-top: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,4 +17,5 @@
 .first-last-name {
   font-family: "Source Sans 3", sans-serif;
   color: #e0e0e0;
+  text-align: center;
 }

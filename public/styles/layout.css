@@ -12,13 +12,6 @@ html {
   box-sizing: inherit;
 }
 
-main {
-  margin: auto;
-  text-align: center;
-  width: 90%;
-  position: relative;
-  background-color: inherit;
-}
 /*
  * Global layout stuff
  */
@@ -33,14 +26,84 @@ body {
 
 .container {
   width: 90%;
-  margin: 0 auto; /* Auto margin for center alignment */
-  padding: 20px; /* Optional padding for better visual appearance */
+  margin: 1em auto;
+  padding: 20px;
   justify-content: center;
   flex-direction: column;
   display: flex;
-  background-color: inherit; /* Same background color as the body */
+  align-items: center;
+  background-color: inherit;
 }
 
+/* -------------display option : desktop -------------- */
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  div.responsive {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  header.header {
+    display: flex;
+    width: 25%;
+    margin: 5em 1em 3em 1em;
+  }
+
+  main.container {
+    display: flex;
+    width: 70%;
+    margin: 4em 2em 3em 1.5em;
+  }
+
+  footer.footer {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 0px 0px 0px;
+    justify-content: end;
+    width: 97%;
+  }
+}
+
+/* -------------display option : tablets -------------- */
+@media only screen and (max-width: 1024px) {
+  nav {
+    width: 100vw;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    display: flex;
+    box-sizing: border-box;
+    color: #ffffff;
+    position: fixed;
+    padding: 1.5em;
+    background-color: rgb(240, 136, 17);
+    opacity: 1;
+    background-image: rgb(240, 136, 17);
+  }
+
+  header.header {
+    height: 400px;
+    opacity: 1;
+    z-index: -1000;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer.footer {
+    width: 97%;
+  }
+
+  div #float-tablet-mode {
+    z-index: 5;
+  }
+}
 /* apply Bungee font to the Tweeter logo in the nav */
 nav span {
   font-family: "Bungee", sans-serif;
