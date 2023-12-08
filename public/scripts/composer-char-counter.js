@@ -59,6 +59,6 @@ $(document).ready(function () {
   });
   //----SCROLL UP BUTTON----
   $("#scroll-up").click(function () {
-    $("html, body").animate({ scrollTop: 0 }, 1500);
+    $("html, body").animate({ scrollTop: 0 }, 1000);
   });
 });
