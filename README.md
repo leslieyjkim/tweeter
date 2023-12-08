@@ -17,4 +17,13 @@ This repository is the starter code for the project: Students will fork and clon
 - Express
 - Node 5.10.x or above
 
+## Final Product
+
+!["Screenshot of Tweeter-Desktop"](https://github.com/leslieyjkim/tweeter/blob/master/docs/Tweeter-Desktop1.png?raw=true)
+!["Screenshot of Tweeter-Desktop"](https://github.com/leslieyjkim/tweeter/blob/master/docs/Tweeter-Desktop2.png?raw=true)
+!["Screenshot of Tweeter-Desktop"](https://github.com/leslieyjkim/tweeter/blob/master/docs/Tweeter-Desktop3.png?raw=true)
+!["Screenshot of Tweeter-Desktop"](https://github.com/leslieyjkim/tweeter/blob/master/docs/Tweeter-Desktop4.png?raw=true)
+!["Screenshot of Tweeter-Desktop"](https://github.com/leslieyjkim/tweeter/blob/master/docs/Tweeter_Desktop.png?raw=true)
+!["Screenshot of Tweeter-Tablets version"](https://github.com/leslieyjkim/tweeter/blob/master/docs/Tweeter-Tablets.png?raw=true)
+
 <!--npm run local -->
