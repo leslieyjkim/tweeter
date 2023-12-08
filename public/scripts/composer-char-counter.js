@@ -4,13 +4,6 @@
 // $(document).ready(function () {
 //   // console.log("Script loaded");
 //   $("#tweet-text").on("input", () => {
-//     // console.log("Script loaded2");
-//     //setting listener
-//     //event handler: input, keyboard input in textarea content.
-//     //#tweet-text is from id=tweet-text in textarea
-//     //use 'this' to capture the value inside tweet text
-//     //render number
-//     //reference this script to update number
 //     const charCount = $(this).val().length;
 //     let counting = 140 - charCount;
 //     // console.log("Characters typed: " + charCount);
@@ -29,7 +22,6 @@
 
 // $(document).ready(function() {
 //   $('#tweet-text').on('input', function() {
-
 //     var tweetLength = $(this).val().length;
 //     var remainingCharacters = 140 - tweetLength;
 //     $('.counter').text(remainingCharacters);
@@ -51,13 +43,11 @@ $(document).ready(function () {
     //$(this)= $textarea. this = whichever element that caused the event to occur
     //console.log(userInput);
     //console.log(userInputLength);
-
     // Selects FORM:the parent of the <textarea>. Then finds the OUTPUT of counter
     let counterValue = $(this)
       .parent()
       .find("output")
       .text(140 - userInputLength);
-
     //change color for the counter
     //if userInputLength is below 0 -> add class to turn counter to red
     if (counterValue.text() < 0) {
@@ -67,11 +57,8 @@ $(document).ready(function () {
       counterValue.removeClass("counter-red");
     }
   });
+  //----SCROLL UP BUTTON----
+  $("#scroll-up").click(function () {
+    $("html, body").animate({ scrollTop: 0 }, 1500);
+  });
 });
-
-// --------------STEP ON HOW TO IMPLENTATION ADD COUNTER------------------
-//call the counter
-//.counter
-//use Jquery .text to set a new value of .counter
-//total minus the amount of input that user input
-//turn red => look up the element .counter, addClass to make it red to the .counter

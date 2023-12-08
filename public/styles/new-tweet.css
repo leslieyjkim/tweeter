@@ -18,12 +18,13 @@ textarea {
   background-color: inherit;
 }
 
-button {
+#tweet-button {
   display: flex;
   justify-self: space-between;
-  background-color: #4056a1;
+  background-color: #2040b3;
   color: #ffffff;
   font-family: Bungee;
+  font-size: 0.9em;
 }
 
 /* ----ERROR BUTTON STYLING---- */

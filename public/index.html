@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/footer.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -59,44 +60,58 @@
         </div>
       </div>
     </nav>
-    <header class="header">
-      <div>
-        <img src="/images/profile-hex.png" />
-      </div>
-      <br />
-      <div>
-        <div class="first-last-name">
-          <!-- <span class="first-name">Yoonjoo</span>
-          <span class="name">Kim</span> -->
-          <span> <strong>Yoonjoo</strong> Kim</span>
+    <div class="responsive">
+      <header class="header">
+        <div>
+          <img src="/images/profile-hex.png" />
         </div>
-      </div>
-    </header>
-
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <form id="tweet-form" action="/tweets/" method="POST">
-          <textarea
-            name="text"
-            id="tweet-text"
-            value="clear"
-            placeholder="What are you humming about?"
-          ></textarea>
-          <div>
-            <button id="tweet-button" type="submit">Tweet</button>
+        <br />
+        <div>
+          <div class="first-last-name">
+            <!-- <span class="first-name">Yoonjoo</span>
+          <span class="name">Kim</span> -->
+            <span> <strong>Yoonjoo</strong> Kim</span>
           </div>
-          <!-- ERROR DISPLAY -->
-          <p class="error-button" id="too-long-error">
-            🤢 Tweet exceeds 140 characters. 🦜
-          </p>
-          <p class="error-button" id="empty-error">
-            🙄 Uh-oh, your tweet box is empty! 🐣
-          </p>
-          <output name="counter" class="counter" for="tweet-text">140</output>
-        </form>
-      </section>
-      <section id="tweets-container"></section>
-    </main>
+        </div>
+      </header>
+
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <form id="tweet-form" action="/tweets/" method="POST">
+            <textarea
+              name="text"
+              id="tweet-text"
+              value="clear"
+              placeholder="What are you humming about?"
+            ></textarea>
+            <div>
+              <button id="tweet-button" type="submit">Tweet</button>
+            </div>
+            <!-- ERROR DISPLAY -->
+            <p class="error-button" id="too-long-error">
+              🤢 Tweet exceeds 140 characters. 🦜
+            </p>
+            <p class="error-button" id="empty-error">
+              🙄 Uh-oh, your tweet box is empty! 🐣
+            </p>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </form>
+        </section>
+        <section id="tweets-container"></section>
+      </main>
+    </div>
+    <footer class="footer">
+      <div id="footer-info" class="footer">
+        <p>© 2023 | <strong>TWEETER</strong> YJ Kim, @ LHL</p>
+        <button id="scroll-up-button" class="boucing-bottom">
+          <i
+            id="scroll-up"
+            style="color: white"
+            class="fa-solid fa-circle-arrow-up"
+          ></i>
+        </button>
+      </div>
+    </footer>
   </body>
 </html>

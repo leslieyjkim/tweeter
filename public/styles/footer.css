@@ -1,0 +1,35 @@
+#footer-info {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #747782;
+  margin: 2em auto;
+  width: 90%;
+  font-size: 0.8em;
+}
+#scroll-up-button {
+  animation: bounce2 1.5s ease infinite forwards;
+  text-shadow: 3px 3px #1f2e5c;
+}
+#scroll-up-button {
+  background-color: #ed9111;
+  bottom: 5%;
+  right: 85%;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 2.5rem;
+  cursor: pointer;
+}
+@keyframes bounce2 {
+  0% {
+    transform: translateY(-0.2rem);
+  }
+  50% {
+    transform: translateY(0.2rem);
+  }
+  100% {
+    transform: translateY(-0.2rem);
+  }
+}
