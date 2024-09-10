@@ -3,7 +3,7 @@
   width: 100%;
   box-sizing: border-box;
 }
-
+/* combine id and class to move altogether when it's re-sizing */
 form {
   display: flex;
   flex-wrap: wrap;
@@ -31,7 +31,7 @@ textarea {
   font-size: 0.9em;
 }
 
-/* ----error-button---- */
+/* --------------------------------------------------error-button---- */
 .error-button {
   align-items: center;
   background-color: #4056a1;
@@ -43,7 +43,6 @@ textarea {
   cursor: pointer;
   display: flex;
   font-family: "Source Sans Pro", sans-serif;
-
   text-shadow: 1px 1px black;
   color: white;
   font-size: 20px;
@@ -73,7 +72,7 @@ textarea {
   letter-spacing: 2px;
   color: #dc0909;
 }
-/* ---------------------------------------tweet-container-------- */
+/* ----------------------------------------tweet-container---------------------- */
 .container {
   padding-bottom: 40px;
 }

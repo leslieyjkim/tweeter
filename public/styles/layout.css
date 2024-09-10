@@ -35,7 +35,7 @@ body {
   background-color: inherit;
 }
 
-/* -------------display option : desktop -------------- */
+/* ------------------------------------------------display option : desktop -------------- */
 @media only screen and (min-width: 1024px) {
   body {
     display: flex;
@@ -69,7 +69,7 @@ body {
   }
 }
 
-/* -------------display option : tablets -------------- */
+/* --------------------------------------------display option : tablets -------------- */
 @media only screen and (max-width: 1024px) {
   nav {
     width: 100vw;
